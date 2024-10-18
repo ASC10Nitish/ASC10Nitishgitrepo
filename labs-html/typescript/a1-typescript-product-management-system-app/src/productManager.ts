@@ -25,7 +25,7 @@ export class Datadetails
     searchData(id:number)
     { 
         console.log(this.details.find(detail=>detail.id=id));
-        console.log("particular id is searched i.e ",id);
+       // console.log("particular id is searched i.e ",id);
         
     }
 
