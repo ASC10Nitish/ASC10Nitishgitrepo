@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><!--character stored in 8 bytes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    // function perform(name,nn)
+    // { 
+    // var output=name.startsWith(nn);
+    // return output;
+    // }
+    // console.log(perform('john','j'));
+
+    // var myname="rambo";
+    // var num=2;
+    // console.log(myname);
+    // console.log(typeof myname); // datatype 
+    // console.log("my name is : ",myname);
+    // console.log(myname,num); //can display 2 variables 
+
+    // console.log("my name is : %s and my num is : %d",myname,num);
+    // console.log("my name is : %s and my num is : %d and boolean is : %s",myname,num,true);
+
+    // console.log("my name is : and my num is : ",myname,num);
+
+    // var floatnumber=1.23;
+    // console.log("value of variable is : %f",floatnumber);
+    
+    //array declaration
+    // var veggies=["carrot","broccoli","spinach","kale"]; 
+
+    //  for(var i=0;i<veggies.length;i++)
+    //  { 
+    //   console.log(veggies[i]);
+    //  }
+     
+     //multidimensional array
+    // var veggiecolor=[["carrot","orange"],["broccoli","green"],["spinach","green"],["kale","red"]];
+    
+    // veggiecolor.push(["blueberry","blue"]); //adding to array
+
+    // for(var i=0;i<veggiecolor.length;i++)
+    // { 
+    //     console.log(veggiecolor[i][0]+"-"+veggiecolor[i][1]);
+    // }
+  
+    //add mango at index 2
+    // veggiecolor.splice(2,0,["mango","yellow"]); 0 specifies no element from 2 position is removed
+    // console.log(veggiecolor);
+    
+    
+    // veggiecolor.pop();
+    // for(var i=0;i<veggiecolor.length;i++)
+    // { 
+    //     console.log(veggiecolor[i][0]+"-"+veggiecolor[i][1]);
+    // }
+    //var a=["carrot","broccoli","spinach","kale"]; 
+    
+     
+    // veggies.shift(); //removes first element
+    // veggies.unshift("abcd","ABCD"); //removes first element and adds one or more at the beginning
+    //var a =veggies.slice(0,2);
+    //var b=[1,2,3,4,2];
+    
+    //var c= a.concat(b); //cancatenates
+    //var c=a.join();  //converts array to string  1,2,3,4
+    //var c=a.join("-"); //1-2-3-4
+   
+    //console.log(b.indexOf(2)); returns index of element
+
+    //console.log(b.lastIndexOf(2)); 
+    
+    //console.log(b.includes(1)); confirms occurence
+    
+    //console.log(b.reverse());  reversing
+
+    //console.log(b.sort());
+ 
+    //var b=a.filter(c=>c.length>7);  filetrs based on condition
+    
+    var a=["carrot","broccoli","spinach","kale"];
+    //var b=a.map(c=>c.toUpperCase()); map() function helps in applyig a particular function to each element of an array
+    
+    a.sort((e,f)=>e-f);
+
+    console.log(a);
+
+    </script>
+</body>
+</html>

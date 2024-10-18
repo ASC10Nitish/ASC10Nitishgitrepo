@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script>
+        function internalScript()
+        { 
+            console.log("internal");
+        }
+    </script>
+    
+</head>
+<body>
+    
+    <form style="background-color: aqua;">
+    
+    <button onclick="alert('Welcome js');">
+    Get Message 
+    </button>
+    
+    <button onclick="alert('thank you'); console.log('thank you');">
+        Thank you</button>
+
+    <button onclick="internalScript">
+            internal</button>
+
+    <button type="button" onclick="internalScript()">
+                internal</button>    
+
+
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="3X1hupNH94BlaiAhyxRs">
+    <mxGraphModel dx="924" dy="511" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-1" value="languages with ; , }&amp;nbsp;&lt;div&gt;C++,c,java&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-2" value="languages with keywords FROM TO JOIN are&amp;nbsp;&lt;div&gt;SQL&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-3" value="languages with tags&amp;nbsp;&lt;div&gt;&amp;lt;/INPUT&amp;gt;&lt;/div&gt;&lt;div&gt;HTML,XHTML&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-4" value="list languages with os&amp;nbsp; DIR,LS,CP,MV&lt;div&gt;powershell, command prompt&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-5" value="programming languages&lt;div&gt;C,C++,JAVA,PYTHON&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-6" value="MARKUP LANGUAGE&lt;div&gt;HTML,XML&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-7" value="Scripting language&lt;div&gt;UNIX,JAVASCRIPT&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-8" value="OOPS&lt;div&gt;JAVA,C#,c++&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-9" value="PROCEDURAL&lt;div&gt;C&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-10" value="MARKUP LANGUAGE&lt;div&gt;HTML,XML&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-11" value="programming languages&lt;div&gt;C,C++,JAVA,PYTHON&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-12" value="Scripting language&lt;div&gt;UNIX,JAVASCRIPT&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-13" value="QUERY LANGUAGE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-14" value="Describes data and presentation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-15" value="Create full application with logical structure" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-16" value="automates tasks" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-17" value="retrieves data from database" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-18" value="INLINE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-19" value="BLOCK" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-20" value="A,B" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-21" value="H1....H6&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-22" value="SUP" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-23" value="SUB" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-24" value="OL,LI" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-25" value="TABLE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-26" value="code ,I" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="1000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-27" value="categorize inline and block elements and apply them" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="1100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-28" value="formatting the table to look good" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="1180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cvi_RW9NpnjqwavFIJFO-29" value="enhance solution&#39;&lt;div&gt;1.date picker&lt;/div&gt;&lt;div&gt;2.range slider&lt;/div&gt;&lt;div&gt;3.reset button&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="1270" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
