@@ -1,0 +1,187 @@
+
+<!--JSON.parse() used for local storage 
+    stringify
+    JSON
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <style>
+            .a:hover {
+                color: red;
+            }
+            #b:hover { 
+                color:red;
+            }
+            table {
+                width: 40%; 
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 2px solid black;
+                padding: 10px;
+                text-align: center;
+                height: 50px;
+            }
+            #static-dashboard-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #refreshButton {
+                background-color: brown;
+                color: antiquewhite;
+                padding: 5px 10px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 18px;
+            }
+            #refreshButton:hover {
+                background-color: darkred;
+            }
+        </style>   
+        <script>
+            function displaydata(event) {
+                event.preventDefault(); 
+        
+                var NAME = document.getElementById('NAME').value;
+                var PASSWORD = document.getElementById('PASSWORD').value;
+                var GENDER = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '';
+                var MOP = document.getElementById('paymentMethod').value;
+        
+                // Create an object to store form data
+                var formData = {
+                    name: NAME,
+                    password: PASSWORD,
+                    gender: GENDER,
+                    paymentMethod: MOP
+                };
+        
+                // Get existing data from local storage
+                var existingData = JSON.parse(localStorage.getItem('formData')) || [];
+        
+                // Add new form data to the existing data
+                existingData.push(formData);
+        
+                // Store updated data back to local storage
+                localStorage.setItem('formData', JSON.stringify(existingData));
+        
+                // Update the table display
+                updateTable(existingData);
+        
+                // Reset the form
+                document.getElementById('myform').reset();
+            }
+        
+            function updateTable(data) {
+                var tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+                tableBody.innerHTML = ''; // Clear existing rows
+        
+                data.forEach(function(item) {
+                    var newRow = tableBody.insertRow();
+                    newRow.insertCell(0).textContent = item.name;
+                    newRow.insertCell(1).textContent = item.password;
+                    newRow.insertCell(2).textContent = item.gender;
+                    newRow.insertCell(3).textContent = item.paymentMethod;
+                });
+            }
+        
+            function refreshTable() {
+                localStorage.removeItem('formData'); // Clear local storage
+                var tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+                tableBody.innerHTML = ''; // Clear the table display
+            }
+        
+            // On page load, retrieve data from local storage and display it
+            window.onload = function() {
+                var existingData = JSON.parse(localStorage.getItem('formData')) || [];
+                updateTable(existingData);
+            };
+        </script>
+        
+    </head>
+    <body style="background-color: bisque;">
+        <h1 style="margin-left: 100px; text-decoration: underline;">REGISTRATION FORM</h1>
+        
+        
+        <div id="static-dashboard-container" style="margin-left: 800px; text-decoration: underline;">
+            <h2 id="b">Static Dashboard</h2>
+            <button id="refreshButton" onclick="refreshTable()">Refresh Table</button> 
+        </div>
+        
+        <form id="myform" onsubmit="return displaydata(event)"
+            style="text-align: left; 
+            border: 3px solid black;
+            padding: 50px;
+            color: brown;
+            text-shadow: 4px 4px 6px #888888;
+            width: 400px;
+            margin-left: 100px;
+            background-color:gainsboro;
+            border-radius: 20px;">
+
+            ENTER YOUR NAME: <input type="text" id="NAME">
+            <br><br>
+
+            ENTER YOUR PASSWORD: <input type="password" id="PASSWORD">
+            <br><br>
+
+            DATE: <input type="date" id="datePicker">
+            <br><br>
+
+            RANGE: <input type="range" id="rangeSlider" min="1" max="20" value="10">
+            <br><br>
+
+            ADDRESS: <textarea cols="30" rows="3"></textarea>
+            <br><br>
+
+            BEVERAGE PREFERENCE:
+            <br><br>
+            <input type="checkbox"> TEA 
+            <input type="checkbox"> COFFEE
+            <br><br>
+
+            GENDER:
+            <br><br>
+            <input type="radio" name="gender" value="MALE"> MALE
+            <input type="radio" name="gender" value="FEMALE"> FEMALE
+            <br><br>
+
+            MODE OF PAYMENT:
+            <select id="paymentMethod"> 
+                <option>CREDITCARD</option>
+                <option>DEBITCARD</option>
+            </select>    
+            <br><br>
+
+            <div style="text-align: center;">
+                <input value="SUBMIT" type="submit" style="background-color: brown; color: antiquewhite;">
+            </div>
+            <br><br>
+
+            <div style="text-align: center;">
+                <button type="reset" id="resetBtn" style="background-color: brown; color: antiquewhite;">RESET</button>
+            </div>
+        </form>
+
+        <table border="1" id="dataTable" style="margin-left: 700px; margin-top: -600px;">
+            
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>PASSWORD</th>
+                    <th>GENDER</th>
+                    <th>MODE OF PAYMENT</th>
+                </tr>    
+            </thead> 
+            <tbody>
+            </tbody> 
+        </table>    
+    </body>
+</html>

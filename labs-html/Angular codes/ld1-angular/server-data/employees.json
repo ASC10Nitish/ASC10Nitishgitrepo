@@ -1,0 +1,8 @@
+{"employee":
+[{ 
+    "id":1,
+    "name":"Rajat Dalal",
+    "password":"Rajat@123",
+    "identity":"Aadhaar",
+    "native":"Hubli"
+}]}

@@ -1,112 +1,161 @@
+
+<!--JSON.parse() used for local storage 
+    stringify
+    JSON
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <style>
-        table {
-            width: 40%; 
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 2px solid black;
-            padding: 10px;
-            text-align: center;
-            height: 50px;
-        }
-    </style>
-</head>
-<body style="background-color: bisque;">
-    <h1 style="margin-left: 100px; text-decoration: underline;">REGISTRATION FORM</h1>
-    <h2><div id="b" style="margin-left: 800px; text-decoration: underline;">Static Dashboard</div></h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <style>
+            .a:hover {
+                color: red;
+            }
+            #b:hover { 
+                color:red;
+            }
+            table {
+                width: 40%; 
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 2px solid black;
+                padding: 10px;
+                text-align: center;
+                height: 50px;
+            }
+            #static-dashboard-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #refreshButton {
+                background-color: brown;
+                color: antiquewhite;
+                padding: 5px 10px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 18px;
+            }
+            #refreshButton:hover {
+                background-color: darkred;
+            }
+        </style>   
+        <script>
+            
+            function displaydata(event) {
+                event.preventDefault(); 
 
-    <form id="myform" style="text-align: left; 
-        border: 3px solid black;
-        padding: 50px;
-        color: brown;
-        text-shadow: 4px 4px 6px #888888;
-        width: 400px;
-        margin-left: 100px;
-        background-color:gainsboro;
-        border-radius: 20px;">
+                var NAME = document.getElementById('NAME').value;
+                var PASSWORD = document.getElementById('PASSWORD').value;
+                var GENDER = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '';
+                var MOP = document.getElementById('paymentMethod').value;
+           
+                var tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+    
+                var newRow = tableBody.insertRow();
+                
+                var cell1 = newRow.insertCell(0);
+                var cell2 = newRow.insertCell(1);
+                var cell3 = newRow.insertCell(2);
+                var cell4 = newRow.insertCell(3);
+               
+                cell1.textContent = NAME;
+                cell2.textContent = PASSWORD;
+                cell3.textContent = GENDER;
+                cell4.textContent = MOP;
+                
+                document.getElementById('myform').reset();
+            }
 
-        ENTER YOUR NAME: <input type="text" id="NAME">
-        <br><br>
-
-        ENTER YOUR PASSWORD: <input type="password" id="PASSWORD">
-        <br><br>
-
-        GENDER:
-        <br><br>
-        <input type="radio" name="gender" value="MALE" id="male"> MALE
-        <input type="radio" name="gender" value="FEMALE" id="female"> FEMALE
-        <br><br>
-
-        MODE OF PAYMENT:
-        <select id="paymentMode">
-            <option value="CREDITCARD">CREDITCARD</option>
-            <option value="DEBITCARD">DEBITCARD</option>
-        </select>
-        <br><br>
-
-        <div style="text-align: center;">
-            <button type="submit" style="background-color: brown; color: antiquewhite;">SUBMIT</button>
+            
+            function refreshTable() {
+                var tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+                tableBody.innerHTML = '';
+            }
+        </script>
+    </head>
+    <body style="background-color: bisque;">
+        <h1 style="margin-left: 100px; text-decoration: underline;">REGISTRATION FORM</h1>
+        
+        
+        <div id="static-dashboard-container" style="margin-left: 800px; text-decoration: underline;">
+            <h2 id="b">Static Dashboard</h2>
+            <button id="refreshButton" onclick="refreshTable()">Refresh Table</button> 
         </div>
-        <br><br>
-    </form>
-
-    <table border="1" id="dataTable" style="margin-left: 700px; margin-top: -350px;">
-        <thead>
-            <tr>
-                <th>NAME</th>
-                <th>PASSWORD</th>
-                <th>GENDER</th>
-                <th>MODE OF PAYMENT</th>
-            </tr>    
-        </thead> 
-        <tbody>
         
-        </tbody> 
-    </table>    
+        <form id="myform" onsubmit="return displaydata(event)"
+            style="text-align: left; 
+            border: 3px solid black;
+            padding: 50px;
+            color: brown;
+            text-shadow: 4px 4px 6px #888888;
+            width: 400px;
+            margin-left: 100px;
+            background-color:gainsboro;
+            border-radius: 20px;">
 
-    <script>
-        
-        const nameInput = document.getElementById('NAME');
-        const passwordInput = document.getElementById('PASSWORD');
-        const genderInputs = document.querySelectorAll('input[name="gender"]');
-        const paymentModeSelect = document.getElementById('paymentMode');
-        const tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+            ENTER YOUR NAME: <input type="text" id="NAME">
+            <br><br>
 
-      
-        function updateTable() {
+            ENTER YOUR PASSWORD: <input type="password" id="PASSWORD">
+            <br><br>
+
+            DATE: <input type="date" id="datePicker">
+            <br><br>
+
+            RANGE: <input type="range" id="rangeSlider" min="1" max="20" value="10">
+            <br><br>
+
+            ADDRESS: <textarea cols="30" rows="3"></textarea>
+            <br><br>
+
+            BEVERAGE PREFERENCE:
+            <br><br>
+            <input type="checkbox"> TEA 
+            <input type="checkbox"> COFFEE
+            <br><br>
+
+            GENDER:
+            <br><br>
+            <input type="radio" name="gender" value="MALE"> MALE
+            <input type="radio" name="gender" value="FEMALE"> FEMALE
+            <br><br>
+
+            MODE OF PAYMENT:
+            <select id="paymentMethod"> 
+                <option>CREDITCARD</option>
+                <option>DEBITCARD</option>
+            </select>    
+            <br><br>
+
+            <div style="text-align: center;">
+                <input value="SUBMIT" type="submit" style="background-color: brown; color: antiquewhite;">
+            </div>
+            <br><br>
+
+            <div style="text-align: center;">
+                <button type="reset" id="resetBtn" style="background-color: brown; color: antiquewhite;">RESET</button>
+            </div>
+        </form>
+
+        <table border="1" id="dataTable" style="margin-left: 700px; margin-top: -600px;">
             
-            const name = nameInput.value;
-            const password = passwordInput.value;
-            const gender = Array.from(genderInputs).find(input => input.checked)?.value || '';
-            const paymentMode = paymentModeSelect.value;
-
-            
-            tableBody.innerHTML = '';
-
-            const newRow = tableBody.insertRow();
-            const cell1 = newRow.insertCell(0);
-            const cell2 = newRow.insertCell(1);
-            const cell3 = newRow.insertCell(2);
-            const cell4 = newRow.insertCell(3);
-
-            cell1.textContent = name;
-            cell2.textContent = password;
-            cell3.textContent = gender;
-            cell4.textContent = paymentMode;
-        }
-
-        
-        nameInput.addEventListener('input', updateTable);
-        passwordInput.addEventListener('input', updateTable);
-        genderInputs.forEach(input => input.addEventListener('change', updateTable));
-        paymentModeSelect.addEventListener('change', updateTable);
-    </script>
-
-</body>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>PASSWORD</th>
+                    <th>GENDER</th>
+                    <th>MODE OF PAYMENT</th>
+                </tr>    
+            </thead> 
+            <tbody>
+            </tbody> 
+        </table>    
+    </body>
 </html>

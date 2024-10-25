@@ -1,0 +1,104 @@
+
+        /*body {
+            background-color: bisque;
+            font-family: Arial, sans-serif;
+        }
+        h1, h2, h3, h4 {
+            text-align: center;
+        }
+        #formContainer {
+            color: brown;
+            border: 3px solid black;
+            padding: 20px;
+            width: 400px;
+            margin: 50px auto;
+            background-color: gainsboro;
+            border-radius: 20px;
+        }
+        .hover-effect:hover {
+            color: red;
+        }
+        input[type="text"], input[type="date"], input[type="range"], textarea, select {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        input[type="submit"], button {
+            background-color: brown;
+            color: antiquewhite;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover, button:hover {
+            background-color: darkred;
+        }
+        .personalDetails {
+            color: brown;
+            text-align: left;
+        }
+        #imageContainer {
+            text-align: center;
+            margin: 20px 0;
+        }*/
+    
+       /* a:hover {
+            color: red;
+          }
+          
+          #b:hover { 
+            color: red;
+          }
+          
+          table {
+            width: 40%; 
+            border-collapse: collapse;
+          }
+          
+          th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+            height: 50px;
+          }
+          
+        
+          
+          #refreshButton {
+            background-color: brown;
+            color: antiquewhite;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+          }
+          
+          #refreshButton:hover {
+            background-color: darkred;
+          }
+          
+          body {
+            background-color: bisque;
+          }
+          
+          h1 {
+            margin-left: 100px;
+          }
+          
+          form {
+            margin-left: 100px;
+            
+            
+          }
+          #ten{ 
+            background-color: brown;
+          }
+           */
+
+           #one{ 
+            background: url('./assets/background.image.jpg');
+           }
