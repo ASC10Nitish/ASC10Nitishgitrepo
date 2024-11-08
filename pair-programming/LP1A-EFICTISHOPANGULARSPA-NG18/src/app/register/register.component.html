@@ -1,0 +1,60 @@
+
+<br>
+<h4 class="text-center mb-4">Register</h4>
+
+<div class="container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    
+        
+        <div class="form-group">
+            <label for="adminName">Admin Name</label>
+            <input type="text" id="adminName" formControlName="adminName" class="form-control"
+                [ngClass]="{'is-invalid':submitted && registerForm.controls['adminName'].errors, 
+                'boldItalicError': registerForm.controls['adminName'].errors}">
+ 
+            
+            <div *ngIf="registerForm.controls['adminName'].errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="registerForm.controls['adminName'].errors?.['required']">
+                    Admin Name is required
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password" class="form-control"
+                [ngClass]="{'is-invalid':submitted && registerForm.controls['password'].errors,
+                'boldItalicError': registerForm.controls['password'].errors}">
+       
+            
+            <div *ngIf="registerForm.controls['password'].errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="registerForm.controls['password'].errors?.['required']">
+                    Password is required
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" formControlName="email" class="form-control"
+                [ngClass]="{'is-invalid':submitted && registerForm.controls['email'].errors,
+                'boldItalicError': registerForm.controls['email'].errors}">
+       
+            
+            <div *ngIf="registerForm.controls['email'].errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="registerForm.controls['email'].errors?.['required']">
+                    Email is required
+                </div>
+                <div *ngIf="registerForm.controls['email'].errors?.['email']">
+                    Email is invalid
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-success btn-lg">Register</button>
+        </div>
+    </form>
+</div>  

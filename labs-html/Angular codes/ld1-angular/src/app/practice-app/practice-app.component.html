@@ -1,4 +1,4 @@
-<p>practice-app works!</p>
+<!--
 <div id="ten">
     <h1 style="text-decoration: underline;">REGISTRATION FORM</h1>
     
@@ -49,7 +49,7 @@
     </form>
     
     <div>
-    <table border="1" style="margin-top: -500px; width: 40%;margin-left: 700px;">
+    <table border="1" style="margin-top: -950px; width: 40%;margin-left: 700px;">
       <thead>
         <tr>
           <th>NAME</th>
@@ -73,3 +73,71 @@
     </div>
     
     </div>
+-->
+<div id="ten">
+  <h1 style="text-decoration: underline;">REGISTRATION FORM</h1>
+
+  <form (submit)="currentData ? updateData() : displayData($event)"
+        style="text-align: left; border: 3px solid black; padding: 25px;margin-top: -10px; color: brown; text-shadow: 4px 4px 6px #888888; width: 400px; background-color: gainsboro; border-radius: 20px;">
+
+    ENTER YOUR NAME: <input type="text" [(ngModel)]="name" name="name" required>
+    <br><br>
+
+    ENTER YOUR PASSWORD: <input type="password" [(ngModel)]="password" name="password" required>
+    <br><br>
+
+    ADDRESS: <textarea [(ngModel)]="address" cols="30" rows="3" name="address" required></textarea>
+    <br><br>
+
+    GENDER:
+    <br><br>
+    <input type="radio" [(ngModel)]="gender" name="gender" value="MALE" required> MALE
+    <input type="radio" [(ngModel)]="gender" name="gender" value="FEMALE" required> FEMALE
+    <br><br>
+
+    MODE OF PAYMENT:
+    <select [(ngModel)]="paymentMethod" name="paymentMethod" required> 
+      <option>CREDITCARD</option>
+      <option>DEBITCARD</option>
+    </select>    
+    <br><br>
+
+    <div style="text-align: left;">
+      <input value="{{ currentData ? 'Update' : 'Submit' }}" type="submit" style="background-color: brown; color: antiquewhite;">
+    </div>
+    <div style="text-align: right;margin-top: -20px;">
+      <button type="button" style="background-color: brown; color: antiquewhite;" (click)="resetForm()">RESET</button>
+    </div>
+  </form>
+
+  <div>
+    <table border="1" style="margin-top: -620px; width: 40%;margin-left: 600px;">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Password</th>
+          <th>Gender</th>
+          <th>Mode of Payment</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>    
+      </thead> 
+      <tbody>
+        <tr *ngFor="let data of formDataList">
+          <td>{{ data.name }}</td>
+          <td>{{ data.password }}</td>
+          <td>{{ data.gender }}</td>
+          <td>{{ data.paymentMethod }}</td>
+          <td>{{ data.address }}</td>
+          <td>
+            <button (click)="editData(data)">Edit</button>
+            <button (click)="deleteData(data.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody> 
+    </table>
+    <div style="margin-left: 1070px;">
+      <button id="refreshButton" (click)="refreshTable()" style="background-color: brown; color: antiquewhite;margin-top: 10px;">Refresh Table</button>
+    </div>
+  </div>
+</div>

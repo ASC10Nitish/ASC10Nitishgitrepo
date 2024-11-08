@@ -1,8 +1,19 @@
-{"employee":
-[{ 
-    "id":1,
-    "name":"Rajat Dalal",
-    "password":"Rajat@123",
-    "identity":"Aadhaar",
-    "native":"Hubli"
-}]}
+{
+  "employee": [
+    {
+      "id": "1",
+      "name": "harsg",
+      "salary": "608676443432345455"
+    },
+    {
+      "id": "2",
+      "name": "nitish",
+      "salary": "00"
+    },
+    {
+      "id": "3",
+      "name": "subu",
+      "salary": "800000000000000888"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+<!--
+<div style="background-color: bisque;">
+  <h1 style="margin-left: 100px; text-decoration: underline;">REGISTRATION FORM</h1>
+  
+  <div id="static-dashboard-container" style="margin-left: 800px; text-decoration: underline;">
+    <h2 id="b">Static Dashboard</h2>
+    <button id="refreshButton" (click)="refreshTable()" style="background-color: brown; color: antiquewhite; padding: 5px 10px; border: none; cursor: pointer; border-radius: 5px; font-size: 18px;">Refresh Table</button>
+  </div>
+  
+  <form (ngSubmit)="displayData($event)"
+        style="text-align: left; border: 3px solid black; padding: 50px; color: brown; text-shadow: 4px 4px 6px #888888; width: 400px; margin-left: 100px; background-color:gainsboro; border-radius: 20px;">
+    
+    ENTER YOUR NAME: <input type="text" [(ngModel)]="name" name="name" required>
+    <br><br>
+
+    ENTER YOUR PASSWORD: <input type="password" [(ngModel)]="password" name="password" required>
+    <br><br>
+
+    DATE: <input type="date" id="datePicker">
+    <br><br>
+
+    RANGE: <input type="range" id="rangeSlider" min="1" max="20" value="10">
+    <br><br>
+
+    ADDRESS: <textarea cols="30" rows="3"></textarea>
+    <br><br>
+
+    BEVERAGE PREFERENCE:
+    <br><br>
+    <input type="checkbox"> TEA 
+    <input type="checkbox"> COFFEE
+    <br><br>
+
+    GENDER:
+    <br><br>
+    <input type="radio" name="gender" value="MALE" [(ngModel)]="gender"> MALE
+    <input type="radio" name="gender" value="FEMALE" [(ngModel)]="gender"> FEMALE
+    <br><br>
+
+    MODE OF PAYMENT:
+    <select [(ngModel)]="paymentMethod" name="paymentMethod"> 
+      <option value="CREDITCARD">CREDITCARD</option>
+      <option value="DEBITCARD">DEBITCARD</option>
+    </select>    
+    <br><br>
+
+    <div style="text-align: center;">
+      <button type="submit" style="background-color: brown; color: antiquewhite;">SUBMIT</button>
+    </div>
+    <br><br>
+
+    <div style="text-align: center;">
+      <button type="button" (click)="resetForm()" style="background-color: brown; color: antiquewhite;">RESET</button>
+    </div>
+  </form>
+
+  <table border="1" id="dataTable" style="margin-left: 700px; margin-top: -600px;">
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>PASSWORD</th>
+        <th>GENDER</th>
+        <th>MODE OF PAYMENT</th>
+      </tr>    
+    </thead> 
+    <tbody>
+      <tr>
+        <td>{{ name }}</td>
+        <td>{{ password }}</td>
+        <td>{{ gender }}</td>
+        <td>{{ paymentMethod }}</td>
+      </tr>
+    </tbody> 
+  </table>    
+</div>
+-->
+
+
+<nav class="navbar navbar-dark navbar-expand-sm container" style="background-color: black;" >
+  <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-link">Employee list (JSON server)</a></li>
+    <li class="nav-item"><a class="nav-link">Add Employee (JSON server)</a></li>
+    <li clss="nav-item"><a class="nav-link">Employee list(springboot)</a></li>
+    <li class="nav-item"><a class="nav-link">Add Employee (springboot)</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <section class="container">
+      <h1>The angular component will come here</h1>
+    <router-outlet></router-outlet>
+    </section>
+    </header>
+
+  <footer class="container" style="background-color: aquamarine;">
+    <h1>Thanks for using our app</h1>
+    <pre> 2021   - Angular Demo App</pre>
+    </footer>

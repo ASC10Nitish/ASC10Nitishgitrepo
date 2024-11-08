@@ -1,0 +1,8 @@
+/* Custom styles for navbar links */
+.navbar-nav .nav-link {
+    color: black !important;  /* Ensure the text color is black */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #333 !important;  /* Darker color on hover for better UX */
+}

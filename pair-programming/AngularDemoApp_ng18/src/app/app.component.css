@@ -1,0 +1,21 @@
+.a:hover {
+    color: red;
+}
+#b:hover { 
+    color: red;
+}
+table {
+    width: 40%; 
+    border-collapse: collapse;
+}
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+}
+#static-dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
