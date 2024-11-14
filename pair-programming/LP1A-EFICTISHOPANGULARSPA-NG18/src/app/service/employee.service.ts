@@ -12,7 +12,7 @@ import { Employee } from "../model/employee.model";
 )
 export class EmployeeService
 {
-  [x: string]: any;   baseUrl:string="http://localhost:3000/employee";
+  [x: string]: any;   baseUrl:string="http://localhost:3000/employees";
     constructor(private httpClient:HttpClient){}
 
     getEmployees()

@@ -1,36 +1,23 @@
-
-
-<!--
-<div class="container">
-    <br>
-    <h5>Employee Details</h5>
-    <div class="table-responsive"> 
-      <table class="table table-striped" style="width: 100%;">
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>Name</th>
-            <th>Salary</th>
-          </tr>
-          
-        </thead>
-        <tbody>
-            <tr *ngFor="let employee of employees">
-                <td>{{employee.id}}</td>
-                <td>{{employee.name}}</td>
-                <td>{{employee.salary}}</td>
-                <td><button (click)="deleteEmployee(employee)" class="btn btn-danger">Delete</button>
-                <td><button (click)="updateEmployee(employee.id)" class="btn btn-warning">Update</button>
-                </tr>
-        </tbody>
-        
-      </table>
-    </div>
-  </div>
--->
 <div class="container my-5">
-  <button type="button" (click)="logout()"></button>
-  <h3 class="text-center mb-4 text-primary">Employee Details</h3>
+  
+  <div class="d-flex justify-content-end mb-4">
+      <button type="button" (click)="logout()" class="btn btn-primary btn-lg" style="width: 150px;">
+          Logout
+      </button>
+  </div>
+  
+  
+  <h3 class="heading text-center mb-4">Employee Details</h3>
+
+  
+  <div class="mb-4 d-flex justify-content-between align-items-center">
+      <div class="input-group w-50">
+          <input type="text" [(ngModel)]="searchInput" name="searchInput" class="form-control" placeholder="Search by ID">
+          <button type="button" (click)="searchEmployee()" class="btn btn-info">Search</button>
+      </div>
+  </div>
+
+  
   <div class="table-responsive">
       <table class="table table-hover table-striped table-bordered" style="width: 100%;">
           <thead class="thead-dark">
@@ -41,23 +28,18 @@
                   <th>Actions</th>
               </tr>
           </thead>
-          
+
           <tbody>
               <tr *ngFor="let employee of employees" class="align-middle">
                   <td>{{employee.id}}</td>
                   <td>{{employee.name}}</td>
-                  <td>Rs. {{employee.salary}}</td> 
+                  <td>Rs. {{employee.salary}}</td>
                   <td class="d-flex justify-content-around">
                       <button (click)="deleteEmployee(employee)" class="btn btn-danger btn-sm">Delete</button>
                       <button (click)="updateEmployee(employee.id)" class="btn btn-warning btn-sm">Update</button>
                   </td>
               </tr>
           </tbody>
-
       </table>
-      <input type="text" [(ngModel)]="searchInput" name="searchInput">
-      <button type="button" (click)="searchEmployee()">Search</button>
   </div>
 </div>
-
-

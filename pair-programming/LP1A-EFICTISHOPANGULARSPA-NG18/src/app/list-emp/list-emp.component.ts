@@ -7,14 +7,23 @@ import Swal from 'sweetalert2';
 @Component
 ({
   selector: 'app-list-emp',
-  //standalone: true,
-  //imports: [],
+  
   templateUrl: './list-emp.component.html',
   styleUrl: './list-emp.component.css'
 })
 
 export class ListEmpComponent implements OnInit 
 {
+  buttonStyle = {
+    'background-color': '#4CAF50',
+    'color': 'white',
+    'padding': '10px 20px',
+    'border': 'none',
+    'border-radius': '5px',
+    'font-size': '16px',
+    'cursor': 'pointer'
+  };
+
   employees:Employee[];
   employeeService:EmployeeService;
   searchInput:any;

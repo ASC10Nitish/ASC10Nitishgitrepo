@@ -1,91 +1,118 @@
-General styling
-.container {
-    max-width: 600px;
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px;
+
+/* Font and background adjustments */
+.text-primary {
+    color: #007bff !important; /* Blue color for the title */
 }
 
-h4 {
+.font-weight-bold {
     font-weight: bold;
-    color: #007bff;
 }
 
-/* Input fields styling */
-.form-control {
-    border-radius: 8px;
-    padding: 12px;
-    font-size: 16px;
-    transition: all 0.3s ease;
+/* Custom Button Hover Effect */
+.btn-hover {
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Input focus styling */
+.btn-hover:hover {
+    background-color: #28a745; /* Slightly darker green for hover */
+    transform: scale(1.05); /* Slight enlarge effect */
+}
+
+/* Input Focus Effect */
 .form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #28a745 !important; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Green glow effect */
 }
 
-/* Submit Button Styling */
-.btn-lg {
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+/* Error Styling */
+.is-invalid {
+    border-color: #dc3545 !important; /* Red border for invalid fields */
 }
 
-.btn-success {
-    background-color: #28a745;
-    border-color: #28a745;
-}
-
-.btn-success:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
-}
-
-/* Error message styling */
+/* Styling the invalid feedback messages */
 .invalid-feedback {
-    font-size: 14px;
-    color: #dc3545;
-    font-style: italic;
+    font-size: 0.875rem;
+    color: #dc3545; /* Red color */
+    font-weight: 500;
 }
 
-.boldItalicError {
-    font-weight: bold;
-    font-style: italic;
+/* Custom Styling for Form */
+.form-control-lg {
+    font-size: 1.1rem; /* Slightly larger font size for inputs */
+    padding: 1rem; /* More padding for inputs */
 }
 
-/* Optional: Add some spacing between form fields */
-.form-group {
-    margin-bottom: 20px;
+/* Adding rounded corners to form fields */
+.form-control, .btn {
+    border-radius: 50px; /* Rounded corners for a soft look */
 }
 
-/* Adding some margin to the submit button */
-.text-center {
-    margin-top: 20px;
-}
-
-/* Focus and hover effect for input fields */
-.form-group input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
+/* Add custom margin for the entire container */
 .container {
-  max-width: 600px;
-  margin: 0 auto; /* Center the form horizontally */
-  padding: 20px;
+    max-width: 600px; /* Center form and restrict its width */
+    padding: 2rem;
 }
 
-.full-width {
-  width: 100%;
+/* Animation for title */
+.animate__animated {
+    animation-duration: 1.5s;
 }
 
-mat-form-field {
-  width: 100%;
-  margin-bottom: 20px;
+.animate__fadeIn {
+    animation-name: fadeIn;
 }
 
-button {
-  width: 100%;
-  font-size: 16px;
-  padding: 10px;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Enhanced heading with gradient and text-shadow */
+.register-heading {
+    font-size: 2.5rem; /* Larger font size for better emphasis */
+    background: linear-gradient(90deg, #007bff, #28a745); /* Blue to green gradient */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make the text transparent to show the gradient */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Soft shadow behind the text */
+    letter-spacing: 1.5px; /* Slight letter-spacing for a more polished look */
+}
+
+/* Animation to add a bounce effect */
+.animate__fadeIn {
+    animation-duration: 1.5s;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Slightly start from above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in the normal position */
+    }
+}
+
+/* Optional: Add a subtle bounce effect to the heading */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.register-heading.animate__animated.animate__bounceIn {
+    animation: bounceIn 1.5s ease;
 }
