@@ -97,7 +97,7 @@ export class IssueListComponent implements OnInit
 
   logout()
   { 
-    sessionStorage.getItem('loggedIn')=='no';
+    sessionStorage.setItem('loggedIn','no');
     this.router.navigate(["/login"]);
   }
   
