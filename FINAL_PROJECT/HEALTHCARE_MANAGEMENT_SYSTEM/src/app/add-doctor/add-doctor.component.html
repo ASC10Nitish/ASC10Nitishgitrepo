@@ -1,0 +1,54 @@
+
+
+   <div class="container">
+    <form [formGroup]="addDoctorForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="doctor_id">Doctor ID</label>
+        <input type="text" formControlName="doctor_id" id="doctor_id" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('doctor_id').touched && addDoctorForm.get('doctor_id').invalid" class="text-danger">
+          Doctor ID is required.
+        </div>
+  
+        <label for="name">Name</label>
+        <input type="text" formControlName="name" id="name" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('name').touched && addDoctorForm.get('name').invalid" class="text-danger">
+          Name is required.
+        </div>
+  
+        <label for="specialty">Specialty</label>
+        <input type="text" formControlName="specialty" id="specialty" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('specialty').touched && addDoctorForm.get('specialty').invalid" class="text-danger">
+          Specialty is required.
+        </div>
+  
+        <label for="experience">Experience</label>
+        <input type="number" formControlName="experience" id="experience" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('experience').touched && addDoctorForm.get('experience').invalid" class="text-danger">
+          Experience is required and must be a positive number.
+        </div>
+  
+        <label for="contact">Contact</label>
+        <input type="text" formControlName="contact" id="contact" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('contact').touched && addDoctorForm.get('contact').invalid" class="text-danger">
+          Contact is required.
+        </div>
+  
+        <label for="email">Email</label>
+        <input type="email" formControlName="email" id="email" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('email').touched && addDoctorForm.get('email').invalid" class="text-danger">
+          A valid email is required.
+        </div>
+  
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-block">Add Doctor</button>
+        </div><br>
+      </div>
+    </form>
+  </div>
+  

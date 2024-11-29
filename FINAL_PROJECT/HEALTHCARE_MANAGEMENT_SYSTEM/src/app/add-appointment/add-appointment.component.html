@@ -1,0 +1,45 @@
+<div class="container">
+  <form [formGroup]="addAppointmentForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="appointment_id">Appointment ID</label>
+      <input type="text" formControlName="appointment_id" id="appointment_id" class="form-control" />
+      <div *ngIf="addAppointmentForm.get('appointment_id').touched && addAppointmentForm.get('appointment_id').invalid" class="text-danger">
+        Appointment ID is required.
+      </div>
+
+      <label for="doctor_id">Doctor ID</label>
+      <input type="text" formControlName="doctor_id" id="doctor_id" class="form-control" />
+      <div *ngIf="addAppointmentForm.get('doctor_id').touched && addAppointmentForm.get('doctor_id').invalid" class="text-danger">
+        Doctor ID is required.
+      </div>
+
+      <label for="patient_id">Patient ID</label>
+      <input type="text" formControlName="patient_id" id="patient_id" class="form-control" />
+      <div *ngIf="addAppointmentForm.get('patient_id').touched && addAppointmentForm.get('patient_id').invalid" class="text-danger">
+        Patient ID is required.
+      </div>
+
+      <label for="appointment_date">Appointment Date</label>
+      <input type="date" formControlName="appointment_date" id="appointment_date" class="form-control" />
+      <div *ngIf="addAppointmentForm.get('appointment_date').touched && addAppointmentForm.get('appointment_date').invalid" class="text-danger">
+        Appointment Date is required.
+      </div>
+
+      <label for="time">Time</label>
+      <input type="time" formControlName="time" id="time" class="form-control" />
+      <div *ngIf="addAppointmentForm.get('time').touched && addAppointmentForm.get('time').invalid" class="text-danger">
+        Time is required.
+      </div>
+
+      <label for="reason">Reason for Visit</label>
+      <input type="text" formControlName="reason" id="reason" class="form-control" />
+      <div *ngIf="addAppointmentForm.get('reason').touched && addAppointmentForm.get('reason').invalid" class="text-danger">
+        Reason is required.
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-block">Add Appointment</button>
+      </div><br>
+    </div>
+  </form>
+</div>

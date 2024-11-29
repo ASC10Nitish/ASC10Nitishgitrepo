@@ -5,7 +5,7 @@
         <button type="button" (click)="logout()" class="btn btn-primary btn-lg" style="width: 150px;">
             Logout
         </button>
-        <button type="button" class="btn btn-warning btn-sm " (click)="addissue()">Add</button>
+        <button type="button" class="btn btn-warning btn-sm " (click)="addissue()">Add Issue</button>
     </div>
     
     
@@ -14,7 +14,7 @@
     
     <div class="mb-4 d-flex justify-content-between align-items-center">
         <div class="input-group w-50">
-            <input type="text" [(ngModel)]="searchInput" name="searchInput" class="form-control" placeholder="Search by ID">
+            <input type="text" [(ngModel)]="searchInput" name="searchInput"  placeholder="Search by ID">
             <button type="button" (click)="searchIssues()" class="btn btn-info">Search</button>
         </div>
     </div>
@@ -31,6 +31,7 @@
                     <th>Status</th>
                     <th>Assignee</th>
                     <th>Date</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
   

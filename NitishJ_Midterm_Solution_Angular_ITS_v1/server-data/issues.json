@@ -1,24 +1,14 @@
 {
   "issues": [
     {
-      "id": "1",
-      "title": "EXAM1",
-      "description": "WEB APP 1",
-      "priority": " HIGH ",
-      "status": " Under Progress",
-      "assignee": " SUBBU 1",
-      "date": "14-11-2024 ",
-      "issue_id": "1"
-    },
-    {
-      "id": "2",
-      "title": "EXAM",
-      "description": "WEB APP ",
-      "priority": " HIGH ",
+      "id": "775a",
+      "issue_id": "5",
+      "title": "ssssss",
+      "description": "ddddddddd",
+      "priority": "High",
       "status": " Under Progress",
       "assignee": " SUBBU 2",
-      "date": "15-11-2024 ",
-      "issue_id": "2"
+      "date": "2024-11-05"
     }
   ]
 }

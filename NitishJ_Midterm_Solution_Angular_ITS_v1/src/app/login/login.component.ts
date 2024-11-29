@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +10,7 @@ import Swal from 'sweetalert2';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-
+  submitted=false;
   constructor(private formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit() {
@@ -23,14 +22,8 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    this.submitted=true;
     if (this.loginForm.invalid) {
-      
-      Swal.fire({
-        title: 'Error',
-        text: 'Please fill in both fields.',
-        icon: 'error',
-        showConfirmButton: true
-      });
       return;
     }
 
@@ -41,20 +34,7 @@ export class LoginComponent implements OnInit {
       
       sessionStorage.setItem('loggedIn', 'yes');
       this.router.navigate(['/issue-list']);
-      Swal.fire({
-        title: 'Login Successful!',
-        showConfirmButton: false,
-        timer: 2000,
-        icon: 'success'
-      });
-    } else {
       
-      Swal.fire({
-        title: 'Login Failed',
-        text: 'Incorrect username or password.',
-        icon: 'error',
-        showConfirmButton: true
-      });
-    }
+    } 
   }
 }

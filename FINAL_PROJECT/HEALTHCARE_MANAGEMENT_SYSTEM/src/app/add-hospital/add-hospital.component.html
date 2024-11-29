@@ -1,0 +1,54 @@
+<div class="container">
+  <form [formGroup]="addHospitalForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <!-- Hospital ID -->
+      <label for="hospital_id">Hospital ID</label>
+      <input type="text" formControlName="hospital_id" id="hospital_id" class="form-control" />
+      
+      <!-- Error message for hospital_id -->
+      <div *ngIf="addHospitalForm.get('hospital_id').touched && addHospitalForm.get('hospital_id').invalid" class="text-danger">
+        Hospital ID is required.
+      </div>
+
+      <!-- Name -->
+      <label for="name">Name</label>
+      <input type="text" formControlName="name" id="name" class="form-control" />
+      
+      <!-- Error message for name -->
+      <div *ngIf="addHospitalForm.get('name').touched && addHospitalForm.get('name').invalid" class="text-danger">
+        Name is required.
+      </div>
+
+      <!-- Address -->
+      <label for="address">Address</label>
+      <input type="text" formControlName="address" id="address" class="form-control" />
+      
+      <!-- Error message for address -->
+      <div *ngIf="addHospitalForm.get('address').touched && addHospitalForm.get('address').invalid" class="text-danger">
+        Address is required.
+      </div>
+
+      <!-- Phone -->
+      <label for="phone">Phone</label>
+      <input type="text" formControlName="phone" id="phone" class="form-control" />
+      
+      <!-- Error message for phone -->
+      <div *ngIf="addHospitalForm.get('phone').touched && addHospitalForm.get('phone').invalid" class="text-danger">
+        Phone is required.
+      </div>
+
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" id="email" class="form-control" />
+      
+      <!-- Error message for email -->
+      <div *ngIf="addHospitalForm.get('email').touched && addHospitalForm.get('email').invalid" class="text-danger">
+        A valid email is required.
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-block">Add Hospital</button>
+      </div><br>
+    </div>
+  </form>
+</div>

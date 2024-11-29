@@ -4,8 +4,9 @@
     
         <div class="form-group">
             <label for="loginid" class="form-label">Login ID</label>
+           
             <input type="text" id="loginid" formControlName="loginid" class="form-control"
-                [ngClass]="{'is-invalid': loginForm.controls['loginid'].errors, 
+                [ngClass]="{'is-invalid':submitted && loginForm.controls['loginid'].errors, 
                             'boldItalicError': loginForm.controls['loginid'].errors}">
             
             <div *ngIf="loginForm.controls['loginid'].errors" class="invalid-feedback boldItalicError">
@@ -19,7 +20,7 @@
         <div class="form-group">
             <label for="password" class="form-label">Password</label>
             <input type="password" id="password" formControlName="password" class="form-control"
-                [ngClass]="{'is-invalid': loginForm.controls['password'].errors,
+                [ngClass]="{'is-invalid':submitted && loginForm.controls['password'].errors,
                             'boldItalicError': loginForm.controls['password'].errors}">
             
             <div *ngIf="loginForm.controls['password'].errors" class="invalid-feedback boldItalicError">

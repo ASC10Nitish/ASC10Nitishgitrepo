@@ -1,0 +1,51 @@
+<!-- review-list.component.html -->
+<div class="container my-5">
+    <!-- Logout and Add Review buttons -->
+    <div class="d-flex justify-content-end mb-4">
+        <button type="button" (click)="logout()" class="btn btn-primary btn-lg" style="width: 150px;">Logout</button>
+        <button type="button" class="btn btn-warning btn-sm" (click)="addReview()">Add Review</button>
+    </div>
+  
+    <h3 class="heading text-center mb-4">Review List</h3>
+  
+    <!-- Search Input -->
+    <div class="mb-4 d-flex justify-content-between align-items-center">
+        <div class="input-group w-50">
+            <input type="text" [(ngModel)]="searchInput" name="searchInput" placeholder="Search by Review ID">
+            <button type="button" (click)="searchReviews()" class="btn btn-info">Search</button>
+        </div>
+    </div>
+  
+    <!-- Review Table -->
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered" style="width: 100%;">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Review ID</th>
+                    <th>Doctor ID</th>
+                    <th>Patient ID</th>
+                    <th>Review Text</th>
+                    <th>Rating</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through reviews and display each one in a row -->
+                <tr *ngFor="let review of reviews" class="align-middle">
+                    <td>{{review.review_id}}</td>
+                    <td>{{review.doctor_id}}</td>
+                    <td>{{review.patient_id}}</td>
+                    <td>{{review.review_text}}</td>
+                    <td>{{review.rating}}</td>
+                    <td>{{review.date | date:'MM/dd/yyyy'}}</td>
+                    <td class="d-flex justify-content-around">
+                        <!-- Buttons for delete and update -->
+                        <button (click)="deleteReview(review)" class="btn btn-danger btn-sm">Delete</button>
+                        <button (click)="updateReview(review.review_id)" class="btn btn-warning btn-sm">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
