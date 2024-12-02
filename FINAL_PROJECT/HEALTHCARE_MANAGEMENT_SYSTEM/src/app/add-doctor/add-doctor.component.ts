@@ -25,10 +25,14 @@ export class AddDoctorComponent implements OnInit {
       name: ['', Validators.required],
       specialty: ['', Validators.required],
       experience: ['', [Validators.required, Validators.min(0)]],
-      contact: ['', Validators.required],
+      contact_number: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]]
     });
   }
+  back()
+{ 
+  this.router.navigate(['/doctors']);
+}
 
   onSubmit(): void {
     

@@ -34,6 +34,11 @@ export class AppointmentsComponent implements OnInit {
     this.router.navigate(['/add-appointment']);
   }
 
+  back()
+  { 
+    this.router.navigate(['/application-menu']);
+  }
+  
   updateAppointment(appointmentId: string | undefined): void {
     if (appointmentId !== undefined) {
       this.router.navigate(['update-appointment', appointmentId]);

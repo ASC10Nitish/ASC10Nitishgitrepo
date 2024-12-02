@@ -1,8 +1,9 @@
 <div class="container my-5">
-    <div class="d-flex justify-content-end mb-4">
-      <button type="button" (click)="logout()" class="btn btn-primary btn-lg" style="width: 150px;">Logout</button>
-      <button type="button" class="btn btn-warning btn-sm" (click)="addDoctor()">Add Doctor</button>
-    </div>
+  <div class="d-flex justify-content-end mb-4">
+    <button mat-raised-button color="primary" type="button" class="me-2" (click)="addDoctor()">Add Doctor</button>
+    <button mat-raised-button color="accent" type="button" class="me-2" style="color:black;" (click)="back()">Back</button>
+    <button mat-raised-button color="warn" type="button" style="width: 150px;" (click)="logout()">Logout</button>
+  </div>
   
     <h3 class="heading text-center mb-4">Doctor List</h3>
   

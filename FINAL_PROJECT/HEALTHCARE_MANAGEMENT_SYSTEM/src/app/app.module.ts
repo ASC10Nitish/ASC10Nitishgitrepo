@@ -31,11 +31,27 @@ import { AddReviewComponent } from "./add-review/add-review.component";
 import { RegisterAdminComponent } from "./register-admin/register-admin.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatInputModule } from '@angular/material/input';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 @NgModule({
     declarations :[AppComponent, LoginComponent,ApplicationMenuComponent,DoctorsListComponent,PatientsListComponent,AppointmentsComponent,ReviewsListComponent,HospitalListComponent,UpdateAppointmentComponent,UpdateDoctorComponent,UpdateHospitalComponent,UpdatePatientComponent,UpdateReviewComponent,AddAppointmentComponent,AddDoctorComponent,AddHospitalComponent,AddPatientComponent,AddReviewComponent,RegisterAdminComponent,NavbarComponent],
     
-    imports: [BrowserModule, AppRoutingModule, RouterOutlet, ReactiveFormsModule, RouterModule, FormsModule, CommonModule, HttpClientModule],
+    imports: [BrowserModule, AppRoutingModule, RouterOutlet, ReactiveFormsModule, RouterModule, FormsModule, CommonModule, HttpClientModule,MatButtonModule,
+      MatToolbarModule,
+      MatCardModule,
+      MatIconModule,
+      BrowserAnimationsModule,
+    MatFormFieldModule,MatInputModule],
     bootstrap:[AppComponent],
     providers: [
       provideAnimationsAsync()

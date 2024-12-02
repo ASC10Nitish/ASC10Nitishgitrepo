@@ -12,8 +12,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
  
  export class RegisterAdminComponent implements OnInit{
-    registerForm: FormGroup; // Holds the form structure
-    submitted = false; // Tracks if the form has been submitted
+    registerForm: FormGroup; 
+    submitted = false; 
  
     constructor(private fb: FormBuilder) {
       this.registerForm = this.fb.group(
@@ -23,7 +23,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
           confirmPassword: ['', Validators.required],
         },
         {
-          validators: this.passwordMatchValidator, // Custom validator
+          validators: this.passwordMatchValidator, 
         }
       );
     }
@@ -48,16 +48,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
       }
     }
  
-    // Handles form submission
+    
     onSubmit() {
-      this.submitted = true; // Set submitted to true to show validation messages
+      this.submitted = true; 
  
       if (this.registerForm.invalid) {
-        // Form is invalid, show validation errors
+        
         return;
       }
  
-      // Proceed with form submission
+    
       alert('Admin Registered Successfully!');
       console.log(this.registerForm.value);
     }

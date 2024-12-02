@@ -33,6 +33,10 @@ export class HospitalListComponent implements OnInit {
     this.router.navigate(['/add-hospital']);
   }
 
+  back()
+  { 
+    this.router.navigate(['/application-menu']);
+  }
   updateHospital(hospitalId: string | undefined): void {
     if (hospitalId !== undefined) {
       this.router.navigate(['update', hospitalId]);

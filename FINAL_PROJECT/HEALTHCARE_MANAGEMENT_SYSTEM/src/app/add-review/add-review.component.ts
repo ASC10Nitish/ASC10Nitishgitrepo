@@ -34,6 +34,10 @@ export class AddReviewComponent implements OnInit {
     return control?.invalid && (control?.touched || control?.dirty);
   }
 
+  back()
+{ 
+  this.router.navigate(['/reviews']);
+}
   onSubmit(): void {
     if (this.addReviewForm.valid) {
       this.reviewService.createReview(this.addReviewForm.value).subscribe(

@@ -1,4 +1,9 @@
+
+<div class="d-flex justify-content-end mb-4">
+  <button mat-raised-button type="button" class="btn btn-primary btn-lg " style="margin-right: 2.4%;" (click)="back()">Back</button>
+</div>
 <div class="container">
+  
   <form [formGroup]="addAppointmentForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="appointment_id">Appointment ID</label>
@@ -7,16 +12,16 @@
         Appointment ID is required.
       </div>
 
-      <label for="doctor_id">Doctor ID</label>
-      <input type="text" formControlName="doctor_id" id="doctor_id" class="form-control" />
-      <div *ngIf="addAppointmentForm.get('doctor_id').touched && addAppointmentForm.get('doctor_id').invalid" class="text-danger">
-        Doctor ID is required.
+      <label for="doctor_name">Doctor Name</label>
+      <input type="text" formControlName="doctor_name" id="doctor_name" class="form-control" />
+      <div *ngIf="addAppointmentForm.get('doctor_name').touched && addAppointmentForm.get('doctor_name').invalid" class="text-danger">
+        Doctor Name is required.
       </div>
 
-      <label for="patient_id">Patient ID</label>
-      <input type="text" formControlName="patient_id" id="patient_id" class="form-control" />
-      <div *ngIf="addAppointmentForm.get('patient_id').touched && addAppointmentForm.get('patient_id').invalid" class="text-danger">
-        Patient ID is required.
+      <label for="patient_name">Patient Name</label>
+      <input type="text" formControlName="patient_name" id="patient_name" class="form-control" />
+      <div *ngIf="addAppointmentForm.get('patient_name').touched && addAppointmentForm.get('patient_name').invalid" class="text-danger">
+        Patient Name is required.
       </div>
 
       <label for="appointment_date">Appointment Date</label>

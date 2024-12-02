@@ -1,4 +1,8 @@
+<div class="d-flex justify-content-end mb-4">
+  <button mat-raised-button type="button" class="btn btn-primary btn-lg" (click)="back()">Back</button>
+</div>
 <div class="container">
+  
   <form [formGroup]="addPatientForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <!-- Patient ID -->

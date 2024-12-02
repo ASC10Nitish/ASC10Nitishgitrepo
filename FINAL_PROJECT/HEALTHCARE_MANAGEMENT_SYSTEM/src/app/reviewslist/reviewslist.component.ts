@@ -1,8 +1,8 @@
-// review-list.component.ts
+
 import { Component, OnInit } from '@angular/core';
-import { Review } from '../model/reviews.model';  // Import the Review model
-import { ReviewService } from '../service/review.service';  // Import the Review Service
-import { Router } from '@angular/router';  // Import Router to navigate between views
+import { Review } from '../model/reviews.model';  
+import { ReviewService } from '../service/review.service';  
+import { Router } from '@angular/router';  
 
 @Component({
   selector: 'app-review-list',
@@ -17,13 +17,13 @@ export class ReviewsListComponent implements OnInit {
   constructor(private reviewService: ReviewService, private router: Router) { }
 
   ngOnInit(): void {
-    // Fetching reviews from the Review Service on component initialization
+  
     this.reviewService.getReviews().subscribe((reviewData) => {
       this.reviews = reviewData;
     });
   }
 
-  // Delete a review
+  
   deleteReview(toDeleteReview: Review): void {
     if (toDeleteReview.review_id !== undefined) {
       this.reviewService.deleteReview(toDeleteReview.review_id).subscribe(() => {
@@ -32,12 +32,16 @@ export class ReviewsListComponent implements OnInit {
     }
   }
 
-  // Navigate to Add Review page
+  
   addReview() {
     this.router.navigate(['/add-review']);
   }
+  back()
+  { 
+    this.router.navigate(['/application-menu']);
+  }
 
-  // Navigate to Update Review page
+  
   updateReview(reviewId: string | undefined): void {
     if (reviewId !== undefined) {
       this.router.navigate(['update-review', reviewId]);
@@ -46,7 +50,7 @@ export class ReviewsListComponent implements OnInit {
     }
   }
 
-  // Search for reviews by review_id
+  
   searchReviews() {
     this.reviewService.getReviews().subscribe((data) => {
       this.searchReview = data.filter(review => review.review_id === this.searchInput);
@@ -58,7 +62,7 @@ export class ReviewsListComponent implements OnInit {
     });
   }
 
-  // Log out function
+
   logout() {
     sessionStorage.setItem('loggedIn', 'no');
     this.router.navigate(['/login']);

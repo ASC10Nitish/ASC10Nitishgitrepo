@@ -20,14 +20,17 @@ export class AddAppointmentComponent implements OnInit {
   ngOnInit(): void {
     this.addAppointmentForm = this.formBuilder.group({
       appointment_id: ['', Validators.required],
-      doctor_id: ['', Validators.required],
-      patient_id: ['', Validators.required],
+      doctor_name: ['', Validators.required],
+      patient_name: ['', Validators.required],
       appointment_date: ['', Validators.required],
       time: ['', Validators.required],
       reason: ['', Validators.required]
     });
   }
-
+back()
+{ 
+  this.router.navigate(['/appointments']);
+}
   onSubmit(): void {
     if (this.addAppointmentForm.valid) {
       this.appointmentService.createAppointment(this.addAppointmentForm.value).subscribe(

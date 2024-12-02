@@ -1,4 +1,8 @@
+<div class="d-flex justify-content-end mb-4">
+  <button mat-raised-button type="button" class="btn btn-primary btn-lg" (click)="back()">Back</button>
+</div>
 <div class="container">
+  
   <form [formGroup]="addReviewForm">
     <div class="form-group">
       <label for="review_id">Review ID</label>
@@ -7,18 +11,18 @@
         Review ID is required.
       </div>
   
-      <label for="doctor_id">Doctor ID</label>
-      <input type="text" formControlName="doctor_id" id="doctor_id" class="form-control" />
+      <label for="doctor_name">Doctor Name</label>
+      <input type="text" formControlName="doctor_name" id="doctor_name" class="form-control" />
       
-      <div *ngIf="isFieldInvalid('doctor_id')" class="text-danger">
-        Doctor ID is required.
+      <div *ngIf="isFieldInvalid('doctor_name')" class="text-danger">
+        Doctor Name is required.
       </div>
   
-      <label for="patient_id">Patient ID</label>
-      <input type="text" formControlName="patient_id" id="patient_id" class="form-control" />
+      <label for="patient_name">Patient Name</label>
+      <input type="text" formControlName="patient_name" id="patient_name" class="form-control" />
       
-      <div *ngIf="isFieldInvalid('patient_id')" class="text-danger">
-        Patient ID is required.
+      <div *ngIf="isFieldInvalid('patient_name')" class="text-danger">
+        Patient Name is required.
       </div>
   
       <label for="review_text">Review Text</label>

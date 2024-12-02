@@ -37,6 +37,10 @@ export class PatientsListComponent implements OnInit {
     this.router.navigate(['/add-patient']);
   }
 
+  back()
+  { 
+    this.router.navigate(['/application-menu']);
+  }
   // Navigate to Update Patient page
   updatePatient(patientId: string | undefined): void {
     if (patientId !== undefined) {

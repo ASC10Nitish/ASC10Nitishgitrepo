@@ -1,14 +1,15 @@
-<!-- patients-list.component.html -->
+
 <div class="container my-5">
-    <!-- Logout and Add Patient buttons -->
+    
     <div class="d-flex justify-content-end mb-4">
-        <button type="button" (click)="logout()" class="btn btn-primary btn-lg" style="width: 150px;">Logout</button>
-        <button type="button" class="btn btn-warning btn-sm" (click)="addPatient()">Add Patient</button>
-    </div>
+        <button mat-raised-button color="primary" type="button" class="me-2" (click)="addPatient()">Add Patient</button>
+        <button mat-raised-button color="accent" type="button" class="me-2" style="color:black;" (click)="back()">Back</button>
+        <button mat-raised-button color="warn" type="button" style="width: 150px;" (click)="logout()">Logout</button>
+      </div>
   
     <h3 class="heading text-center mb-4">Patient List</h3>
   
-    <!-- Search Input -->
+   
     <div class="mb-4 d-flex justify-content-between align-items-center">
         <div class="input-group w-50">
             <input type="text" [(ngModel)]="searchInput" name="searchInput" placeholder="Search by ID">
@@ -16,7 +17,7 @@
         </div>
     </div>
   
-    <!-- Patient Table -->
+  
     <div class="table-responsive">
         <table class="table table-hover table-striped table-bordered" style="width: 100%;">
             <thead class="thead-dark">
@@ -32,7 +33,7 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Loop through patients and display each one in a row -->
+                
                 <tr *ngFor="let patient of patients" class="align-middle">
                     <td>{{patient.patient_id}}</td>
                     <td>{{patient.first_name}}</td>
@@ -42,7 +43,7 @@
                     <td>{{patient.dob | date:'MM/dd/yyyy'}}</td>
                     <td>{{patient.gender}}</td>
                     <td class="d-flex justify-content-around">
-                        <!-- Buttons for delete and update -->
+                        
                         <button (click)="deletePatient(patient)" class="btn btn-danger btn-sm">Delete</button>
                         <button (click)="updatePatient(patient.patient_id)" class="btn btn-warning btn-sm">Update</button>
                     </td>

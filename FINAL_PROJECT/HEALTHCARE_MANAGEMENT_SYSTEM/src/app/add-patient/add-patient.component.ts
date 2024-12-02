@@ -29,7 +29,10 @@ export class AddPatientComponent implements OnInit {
       gender: ['', Validators.required]
     });
   }
-
+  back()
+  { 
+    this.router.navigate(['/patients']);
+  }
   onSubmit(): void {
     if (this.addPatientForm.valid) {
       this.patientService.createPatient(this.addPatientForm.value).subscribe(

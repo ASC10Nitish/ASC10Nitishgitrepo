@@ -26,6 +26,10 @@ export class AddHospitalComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]]
     });
   }
+  back()
+{ 
+  this.router.navigate(['/hospitals']);
+}
 
   onSubmit(): void {
     if (this.addHospitalForm.valid) {

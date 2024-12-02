@@ -1,8 +1,10 @@
 <div class="container my-5">
-    <div class="d-flex justify-content-end mb-4">
-      <button type="button" (click)="logout()" class="btn btn-primary btn-lg" style="width: 150px;">Logout</button>
-      <button type="button" class="btn btn-warning btn-sm" (click)="addHospital()">Add Hospital</button>
-    </div>
+  <div class="d-flex justify-content-end mb-4">
+    <button mat-raised-button color="primary" type="button" class="me-2" (click)="addHospital()">Add Hospital</button>
+    <button mat-raised-button color="accent" type="button" class="me-2" style="color:black;" (click)="back()">Back</button>
+    <button mat-raised-button color="warn" type="button" style="width: 150px;" (click)="logout()">Logout</button>
+  </div>
+  
   
     <h3 class="heading text-center mb-4">Hospital List</h3>
   
@@ -18,9 +20,9 @@
         <thead class="thead-dark">
           <tr>
             <th>Hospital ID</th>
-            <th>Name</th>
+            <th>Hospital Name</th>
             <th>Address</th>
-            <th>Phone</th>
+            <th>Contact Number</th>
             <th>Email</th>
             <th>Actions</th>
           </tr>
@@ -28,9 +30,9 @@
         <tbody>
           <tr *ngFor="let hospital of hospitals" class="align-middle">
             <td>{{hospital.hospital_id}}</td>
-            <td>{{hospital.name}}</td>
+            <td>{{hospital.hospital_name}}</td>
             <td>{{hospital.address}}</td>
-            <td>{{hospital.phone}}</td>
+            <td>{{hospital.contact_number}}</td>
             <td>{{hospital.email}}</td>
             <td class="d-flex justify-content-around">
               <button (click)="deleteHospital(hospital)" class="btn btn-danger btn-sm">Delete</button>
