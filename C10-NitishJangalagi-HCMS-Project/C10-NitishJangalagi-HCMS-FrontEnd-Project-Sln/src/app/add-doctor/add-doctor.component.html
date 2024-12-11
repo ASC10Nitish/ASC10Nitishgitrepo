@@ -1,0 +1,163 @@
+<!-- 
+<div class="d-flex justify-content-end mb-4">
+  <button mat-raised-button type="button" class="btn btn-primary btn-lg" (click)="back()">Back</button>
+</div>
+   <div class="container">
+    
+    <form [formGroup]="addDoctorForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="doctorId">Doctor ID</label>
+        <input type="text" formControlName="doctorId" id="doctorId" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('doctorId').touched && addDoctorForm.get('doctorId').invalid" class="text-danger">
+          Doctor ID is required.
+        </div>
+  
+        <label for="name">Name</label>
+        <input type="text" formControlName="name" id="name" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('name').touched && addDoctorForm.get('name').invalid" class="text-danger">
+          Name is required.
+        </div>
+  
+        <label for="speciality">Specialty</label>
+        <input type="text" formControlName="speciality" id="speciality" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('speciality').touched && addDoctorForm.get('speciality').invalid" class="text-danger">
+          Specialty is required.
+        </div>
+  
+        <label for="experience">Experience</label>
+        <input type="number" formControlName="experience" id="experience" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('experience').touched && addDoctorForm.get('experience').invalid" class="text-danger">
+          Experience is required and must be a positive number.
+        </div>
+  
+        <label for="contactNumber">Contact Number</label>
+        <input type="text" formControlName="contactNumber" id="contactNumber" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('contactNumber').touched && addDoctorForm.get('contactNumber').invalid" class="text-danger">
+          Contact Number is required.
+        </div>
+  
+        <label for="email">Email</label>
+        <input type="email" formControlName="email" id="email" class="form-control" />
+        
+        <div *ngIf="addDoctorForm.get('email').touched && addDoctorForm.get('email').invalid" class="text-danger">
+          A valid email is required.
+        </div>
+  
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-block">Add Doctor</button>
+        </div><br>
+      </div>
+    </form>
+  </div>
+   
+ -->
+
+ <!-- <div class="d-flex justify-content-end mb-4">
+  <button mat-raised-button type="button" class="btn btn-primary btn-lg" (click)="back()">Back</button>
+</div>
+
+<div class="container">
+  <form [formGroup]="addDoctorForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      
+      <label for="doctorId">Doctor ID</label>
+      <input type="text" formControlName="doctorId" id="doctorId" class="form-control"  />
+
+      <div *ngIf="addDoctorForm.get('doctorId').touched && addDoctorForm.get('doctorId').invalid" class="text-danger">
+        Doctor ID is required.
+      </div>
+
+      <label for="name">Name</label>
+      <input type="text" formControlName="name" id="name" class="form-control" />
+      <div *ngIf="addDoctorForm.get('name').touched && addDoctorForm.get('name').invalid" class="text-danger">
+        Name is required.
+      </div>
+
+      <label for="speciality">Specialty</label>
+      <input type="text" formControlName="speciality" id="speciality" class="form-control" />
+      <div *ngIf="addDoctorForm.get('speciality').touched && addDoctorForm.get('speciality').invalid" class="text-danger">
+        Specialty is required.
+      </div>
+
+      <label for="experience">Experience</label>
+      <input type="number" formControlName="experience" id="experience" class="form-control" />
+      <div *ngIf="addDoctorForm.get('experience').touched && addDoctorForm.get('experience').invalid" class="text-danger">
+        Experience is required and must be a positive number.
+      </div>
+
+      <label for="contactNumber">Contact Number</label>
+      <input type="text" formControlName="contactNumber" id="contactNumber" class="form-control" />
+      <div *ngIf="addDoctorForm.get('contactNumber').touched && addDoctorForm.get('contactNumber').invalid" class="text-danger">
+        Contact Number is required.
+      </div>
+
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" id="email" class="form-control" />
+      <div *ngIf="addDoctorForm.get('email').touched && addDoctorForm.get('email').invalid" class="text-danger">
+        A valid email is required.
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-block">Add</button>
+      </div><br>
+    </div>
+  </form>
+</div> -->
+
+
+<div class="d-flex justify-content-end mb-4">
+  <button mat-raised-button type="button" class="btn btn-primary btn-lg" (click)="back()">Back</button>
+</div>
+
+<div class="container">
+  <form [formGroup]="addDoctorForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <!-- Doctor ID (auto-generated and disabled) -->
+      <label for="doctorId">Doctor ID</label>
+      <input type="text" formControlName="doctorId" id="doctorId" class="form-control" />
+
+      <div *ngIf="addDoctorForm.get('doctorId').touched && addDoctorForm.get('doctorId').invalid" class="text-danger">
+        Doctor ID is required.
+      </div>
+
+      <label for="name">Name</label>
+      <input type="text" formControlName="name" id="name" class="form-control" />
+      <div *ngIf="addDoctorForm.get('name').touched && addDoctorForm.get('name').invalid" class="text-danger">
+        Name is required.
+      </div>
+
+      <label for="speciality">Specialty</label>
+      <input type="text" formControlName="speciality" id="speciality" class="form-control" />
+      <div *ngIf="addDoctorForm.get('speciality').touched && addDoctorForm.get('speciality').invalid" class="text-danger">
+        Specialty is required.
+      </div>
+
+      <label for="experience">Experience</label>
+      <input type="number" formControlName="experience" id="experience" class="form-control" />
+      <div *ngIf="addDoctorForm.get('experience').touched && addDoctorForm.get('experience').invalid" class="text-danger">
+        Experience is required and must be a positive number.
+      </div>
+
+      <label for="contactNumber">Contact Number</label>
+      <input type="text" formControlName="contactNumber" id="contactNumber" class="form-control" />
+      <div *ngIf="addDoctorForm.get('contactNumber').touched && addDoctorForm.get('contactNumber').invalid" class="text-danger">
+        Contact Number is required.
+      </div>
+
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" id="email" class="form-control" />
+      <div *ngIf="addDoctorForm.get('email').touched && addDoctorForm.get('email').invalid" class="text-danger">
+        A valid email is required.
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-block">Add</button>
+      </div><br>
+    </div>
+  </form>
+</div>

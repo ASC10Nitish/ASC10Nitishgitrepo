@@ -1,0 +1,38 @@
+
+.card {
+    max-width: 500px; 
+    margin: 0 auto; 
+  }
+  
+  .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .btn {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+  
+  .btn:hover {
+    opacity: 0.9; 
+    transition: opacity 0.3s;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .d-grid {
+      grid-template-columns: 1fr; 
+    }
+  
+    .btn {
+      font-size: 1rem; 
+      padding: 10px;
+    }
+  }
+  

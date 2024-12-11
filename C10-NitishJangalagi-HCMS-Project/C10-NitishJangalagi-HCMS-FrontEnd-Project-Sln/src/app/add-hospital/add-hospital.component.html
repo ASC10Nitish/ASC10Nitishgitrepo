@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-end mb-4">
+  <button mat-raised-button type="button" class="btn btn-primary btn-lg" (click)="back()">Back</button>
+</div>
+
+<div class="container">
+  <form [formGroup]="addHospitalForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      
+      <label for="hospitalId">Hospital ID</label>
+      <input type="text" formControlName="hospitalId" id="hospitalId" class="form-control" />
+      <div *ngIf="addHospitalForm.get('hospitalId').touched && addHospitalForm.get('hospitalId').invalid" class="text-danger">
+        Hospital ID is required.
+      </div>
+
+      <label for="hospitalName">Hospital Name</label>
+      <input type="text" formControlName="hospitalName" id="hospitalName" class="form-control" />
+      <div *ngIf="addHospitalForm.get('hospitalName').touched && addHospitalForm.get('hospitalName').invalid" class="text-danger">
+        Hospital Name is required.
+      </div>
+
+      <label for="address">Address</label>
+      <input type="text" formControlName="address" id="address" class="form-control" />
+      <div *ngIf="addHospitalForm.get('address').touched && addHospitalForm.get('address').invalid" class="text-danger">
+        Address is required.
+      </div>
+
+      <label for="contactNumber">Contact Number</label>
+      <input type="text" formControlName="contactNumber" id="contactNumber" class="form-control" />
+      <div *ngIf="addHospitalForm.get('contactNumber').touched && addHospitalForm.get('contactNumber').invalid" class="text-danger">
+        Contact Number is required and should be a valid number.
+      </div>
+
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" id="email" class="form-control" />
+      <div *ngIf="addHospitalForm.get('email').touched && addHospitalForm.get('email').invalid" class="text-danger">
+        A valid email is required.
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-block" >Add Hospital</button>
+      </div><br>
+    </div>
+  </form>
+</div>

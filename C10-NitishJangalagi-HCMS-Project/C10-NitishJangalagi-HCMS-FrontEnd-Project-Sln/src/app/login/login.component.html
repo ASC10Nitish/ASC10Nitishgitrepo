@@ -1,0 +1,63 @@
+
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow-lg p-5" style="max-width: 400px; width: 100%; border-radius: 15px; background-color: #f7f7f7;">
+    <h4 class="text-center mb-4 text-primary font-weight-bold animate__animated animate__fadeIn">Login to Your Healthcare Account</h4>
+    
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      
+      <div class="mb-3 position-relative">
+        <label for="emailid" class="form-label text-secondary">Email Address</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+          <input type="text" id="emailid" formControlName="emailid" class="form-control"
+                [ngClass]="{'is-invalid':submitted && loginForm.controls['emailid'].errors, 
+                            'boldItalicError': loginForm.controls['emailid'].errors}">
+            
+            <div *ngIf="loginForm.controls['emailid'].errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="loginForm.controls['emailid'].errors?.['required']">
+                    Email is required
+                </div>
+            </div>
+        </div>
+      </div>
+  
+      <div class="mb-3 position-relative">
+        <label for="password" class="form-label text-secondary">Password</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+          <input type="text" id="password" formControlName="password" class="form-control"
+                [ngClass]="{'is-invalid':submitted && loginForm.controls['password'].errors, 
+                            'boldItalicError': loginForm.controls['password'].errors}">
+            
+            <div *ngIf="loginForm.controls['password'].errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="loginForm.controls['password'].errors?.['required']">
+                    Password is required
+                </div>
+            </div>
+            </div>
+      </div>
+  
+      <div class="d-grid gap-2 mt-4">
+        <button type="submit" class="btn btn-primary btn-lg shadow" [disabled]="isLocked">Login</button>
+      </div>
+    </form>
+
+    <div *ngIf="failedAttempts > 0" class="mt-3 text-center text-danger">
+      <p *ngIf="!isLocked">
+        You have {{ remainingAttempts }} attempt{{ remainingAttempts === 1 ? '' : 's' }} left.
+      </p>
+      <p *ngIf="isLocked">
+        You have been locked out due to too many failed attempts. Please try again later.
+      </p>
+    </div>
+
+    <div *ngIf="errorMessage" class="text-center text-danger mt-3">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+    <!-- <div class="text-center mt-3">
+      <p class="text-muted">Don't have an account <a href="registeradmin" class="text-primary"> Register here </a></p>
+    </div> -->
+  </div>
+</div>

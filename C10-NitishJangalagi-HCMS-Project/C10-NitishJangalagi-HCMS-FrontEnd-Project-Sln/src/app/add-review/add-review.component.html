@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-end mb-4">
+  <button mat-raised-button type="button" class="btn btn-primary btn-lg" (click)="back()">Back</button>
+</div>
+<div class="container">
+  
+  <form [formGroup]="addReviewForm">
+    <div class="form-group">
+      <label for="review_id">Review ID</label>
+      <input type="text" formControlName="review_id" id="review_id" class="form-control" />
+      <div *ngIf="isFieldInvalid('review_id')" class="text-danger">
+        Review ID is required.
+      </div>
+  
+      <label for="doctor_name">Doctor Name</label>
+      <input type="text" formControlName="doctor_name" id="doctor_name" class="form-control" />
+      
+      <div *ngIf="isFieldInvalid('doctor_name')" class="text-danger">
+        Doctor Name is required.
+      </div>
+  
+      <label for="patient_name">Patient Name</label>
+      <input type="text" formControlName="patient_name" id="patient_name" class="form-control" />
+      
+      <div *ngIf="isFieldInvalid('patient_name')" class="text-danger">
+        Patient Name is required.
+      </div>
+  
+      <label for="review_text">Review Text</label>
+      <textarea formControlName="review_text" id="review_text" class="form-control"></textarea>
+      
+      <div *ngIf="isFieldInvalid('review_text')" class="text-danger">
+        Review Text is required.
+      </div>
+  
+      <label for="rating">Rating (1-5)</label>
+      <input type="number" formControlName="rating" id="rating" class="form-control" min="1" max="5" />
+      
+      <div *ngIf="isFieldInvalid('rating')" class="text-danger">
+        Rating is required and must be between 1 and 5.
+      </div>
+  
+      <label for="date">Date</label>
+      <input type="date" formControlName="date" id="date" class="form-control" />
+      
+      <div *ngIf="isFieldInvalid('date')" class="text-danger">
+        Date is required.
+      </div>
+  
+      <div class="d-grid">
+        <button type="button" class="btn btn-primary btn-block" (click)="onSubmit()">Add Review</button>
+      </div><br>
+    </div>
+  </form>
+</div>

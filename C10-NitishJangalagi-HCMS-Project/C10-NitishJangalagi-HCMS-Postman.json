@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "864c3cff-2c09-4c1d-afde-fb0d486620bb",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39277951"
+	},
+	"item": [
+		{
+			"name": "GetDoctor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":8,\r\n\"doctorId\":\"B123\",\r\n\"name\":\"Nitishhhshhhh\",\r\n\"contactNumber\":\"07483730015\",\r\n\"email\":\"n@n\",\r\n\"experience\":2,\r\n\"speciality\":\"Eng\"}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/doctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRegister",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":8,\r\n\"doctorId\":\"B123\",\r\n\"name\":\"Nitishhhshhhh\",\r\n\"contactNumber\":\"07483730015\",\r\n\"email\":\"n@n\",\r\n\"experience\":2,\r\n\"speciality\":\"Eng\"}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v5/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v5",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAppointment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v2/appointment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHospital",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v3/hospital",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v3",
+						"hospital"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

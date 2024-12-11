@@ -1,0 +1,111 @@
+<div class="container mt-5">
+    <div class="d-flex justify-content-end mb-4">
+      <button mat-raised-button color="accent" type="button" class="me-2" style="color:black;" (click)="back()">Back</button>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-lg border-0 rounded p-4">
+          <h2 class="text-center text-primary mb-4">Update Appointment</h2>
+          <form (ngSubmit)="onSubmit()" #appointmentForm="ngForm">
+  
+            <!-- Appointment ID -->
+            <div class="form-group">
+              <label for="appointmentId" class="font-weight-bold text-secondary">Appointment ID</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="appointment.appointmentId" 
+                name="appointmentId" 
+                required 
+                placeholder="Enter Appointment ID" />
+              <div *ngIf="appointmentForm.controls['appointmentId']?.invalid && appointmentForm.controls['appointmentId']?.touched" class="text-danger">
+                Appointment ID is required.
+              </div>
+            </div>
+  
+            <!-- Doctor Name -->
+            <div class="form-group">
+              <label for="doctorName" class="font-weight-bold text-secondary">Doctor Name</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="appointment.doctorName" 
+                name="doctorName" 
+                required 
+                placeholder="Enter Doctor Name" />
+              <div *ngIf="appointmentForm.controls['doctorName']?.invalid && appointmentForm.controls['doctorName']?.touched" class="text-danger">
+                Doctor Name is required.
+              </div>
+            </div>
+  
+            <!-- Patient Name -->
+            <div class="form-group">
+              <label for="patientName" class="font-weight-bold text-secondary">Patient Name</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="appointment.patientName" 
+                name="patientName" 
+                required 
+                placeholder="Enter Patient Name" />
+              <div *ngIf="appointmentForm.controls['patientName']?.invalid && appointmentForm.controls['patientName']?.touched" class="text-danger">
+                Patient Name is required.
+              </div>
+            </div>
+  
+            <!-- Appointment Date -->
+            <div class="form-group">
+              <label for="appointmentDate" class="font-weight-bold text-secondary">Appointment Date</label>
+              <input 
+                type="date" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="appointment.appointmentDate" 
+                name="appointmentDate" 
+                required />
+              <div *ngIf="appointmentForm.controls['appointmentDate']?.invalid && appointmentForm.controls['appointmentDate']?.touched" class="text-danger">
+                Appointment Date is required.
+              </div>
+            </div>
+  
+            <!-- Time -->
+            <div class="form-group">
+              <label for="time" class="font-weight-bold text-secondary">Time</label>
+              <input 
+                type="time" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="appointment.time" 
+                name="time" 
+                required />
+              <div *ngIf="appointmentForm.controls['time']?.invalid && appointmentForm.controls['time']?.touched" class="text-danger">
+                Time is required.
+              </div>
+            </div>
+  
+            <!-- Reason -->
+            <div class="form-group">
+              <label for="reason" class="font-weight-bold text-secondary">Reason</label>
+              <textarea 
+                class="form-control form-control-lg" 
+                [(ngModel)]="appointment.reason" 
+                name="reason" 
+                required 
+                placeholder="Enter Reason"></textarea>
+              <div *ngIf="appointmentForm.controls['reason']?.invalid && appointmentForm.controls['reason']?.touched" class="text-danger">
+                Reason is required.
+              </div>
+            </div>
+  
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="appointmentForm.invalid">
+              Update Appointment
+            </button>
+  
+          </form>
+  
+          <!-- Success and Error messages -->
+          <div *ngIf="successMessage" class="alert alert-success mt-4">{{ successMessage }}</div>
+          <div *ngIf="errorMessage" class="alert alert-danger mt-4">{{ errorMessage }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
