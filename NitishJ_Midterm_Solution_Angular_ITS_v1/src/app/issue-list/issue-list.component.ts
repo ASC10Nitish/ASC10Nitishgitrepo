@@ -52,6 +52,7 @@ export class IssueListComponent implements OnInit
       });
     }
   }
+  
   addissue()
   { 
     this.router.navigate(['/addissue']);

@@ -1,0 +1,10 @@
+
+.navbar-brand:hover {
+    color: #1e90ff; /* Blue on hover for the brand */
+  }
+  
+  .nav-link:hover {
+    background-color: #003366; /* Darker blue for button hover */
+    color: white; /* White text on hover */
+  }
+  

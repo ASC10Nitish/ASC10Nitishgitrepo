@@ -1,0 +1,120 @@
+
+
+
+   <div class="container mt-5">
+
+    <div class="d-flex justify-content-end mb-4">
+      
+      <button mat-raised-button color="accent" type="button" class="me-2" style="color:black;" (click)="back()">Back</button>
+      
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-lg border-0 rounded p-4">
+          <h2 class="text-center text-primary mb-4">Update Doctor</h2>
+          <form (ngSubmit)="onSubmit()" #doctorForm="ngForm">
+  
+            <!-- Doctor ID -->
+            <div class="form-group">
+              <label for="doctorId" class="font-weight-bold text-secondary">Doctor ID</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="doctor.doctorId" 
+                name="doctorId" 
+                required 
+                placeholder="Enter Doctor ID" />
+              <div *ngIf="doctorForm.controls['doctorId']?.invalid && doctorForm.controls['doctorId']?.touched" class="text-danger">
+                Doctor ID is required.
+              </div>
+            </div>
+  
+            <!-- Name -->
+            <div class="form-group">
+              <label for="name" class="font-weight-bold text-secondary">Name</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="doctor.name" 
+                name="name" 
+                required 
+                placeholder="Enter Name" />
+              <div *ngIf="doctorForm.controls['name']?.invalid && doctorForm.controls['name']?.touched" class="text-danger">
+                Name is required.
+              </div>
+            </div>
+  
+            <!-- Speciality -->
+            <div class="form-group">
+              <label for="speciality" class="font-weight-bold text-secondary">Speciality</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="doctor.speciality" 
+                name="speciality" 
+                required 
+                placeholder="Enter Speciality" />
+              <div *ngIf="doctorForm.controls['speciality']?.invalid && doctorForm.controls['speciality']?.touched" class="text-danger">
+                Speciality is required.
+              </div>
+            </div>
+  
+            <!-- Experience -->
+            <div class="form-group">
+              <label for="experience" class="font-weight-bold text-secondary">Experience</label>
+              <input 
+                type="number" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="doctor.experience" 
+                name="experience" 
+                required 
+                placeholder="Enter Experience" />
+              <div *ngIf="doctorForm.controls['experience']?.invalid && doctorForm.controls['experience']?.touched" class="text-danger">
+                Experience is required.
+              </div>
+            </div>
+  
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email" class="font-weight-bold text-secondary">Email</label>
+              <input 
+                type="email" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="doctor.email" 
+                name="email" 
+                required 
+                placeholder="Enter Email" />
+              <div *ngIf="doctorForm.controls['email']?.invalid && doctorForm.controls['email']?.touched" class="text-danger">
+                Email is required.
+              </div>
+            </div>
+  
+            <!-- Contact Number -->
+            <div class="form-group">
+              <label for="contactNumber" class="font-weight-bold text-secondary">Contact Number</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="doctor.contactNumber" 
+                name="contact_number" 
+                required 
+                placeholder="Enter Contact Number" />
+              <div *ngIf="doctorForm.controls['contactNumber']?.invalid && doctorForm.controls['contactNumber']?.touched" class="text-danger">
+                Contact Number is required.
+              </div>
+            </div>
+  
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="doctorForm.invalid">
+              Update Doctor
+            </button>
+  
+          </form>
+  
+          <!-- Success and Error messages -->
+          <div *ngIf="successMessage" class="alert alert-success mt-4">{{ successMessage }}</div>
+          <div *ngIf="errorMessage" class="alert alert-danger mt-4">{{ errorMessage }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
