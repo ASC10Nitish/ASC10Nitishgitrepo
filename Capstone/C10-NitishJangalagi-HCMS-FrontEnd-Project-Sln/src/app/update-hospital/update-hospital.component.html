@@ -1,0 +1,99 @@
+<div class="container mt-5">
+    <div class="d-flex justify-content-end mb-4">
+      <button mat-raised-button color="accent" type="button" class="me-2" style="color:black;" (click)="back()">Back</button>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-lg border-0 rounded p-4">
+          <h2 class="text-center text-primary mb-4">Update Hospital</h2>
+          <form (ngSubmit)="onSubmit()" #hospitalForm="ngForm">
+    
+            <!-- Hospital ID -->
+            <div class="form-group">
+              <label for="hospitalId" class="font-weight-bold text-secondary">Hospital ID</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="hospital.hospitalId" 
+                name="hospitalId" 
+                required 
+                placeholder="Enter Hospital ID" />
+              <div *ngIf="hospitalForm.controls['hospitalId']?.invalid && hospitalForm.controls['hospitalId']?.touched" class="text-danger">
+                Hospital ID is required.
+              </div>
+            </div>
+    
+            <!-- Hospital Name -->
+            <div class="form-group">
+              <label for="hospitalName" class="font-weight-bold text-secondary">Hospital Name</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="hospital.hospitalName" 
+                name="hospitalName" 
+                required 
+                placeholder="Enter Hospital Name" />
+              <div *ngIf="hospitalForm.controls['hospitalName']?.invalid && hospitalForm.controls['hospitalName']?.touched" class="text-danger">
+                Hospital Name is required.
+              </div>
+            </div>
+    
+            <!-- Address -->
+            <div class="form-group">
+              <label for="address" class="font-weight-bold text-secondary">Address</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="hospital.address" 
+                name="address" 
+                required 
+                placeholder="Enter Address" />
+              <div *ngIf="hospitalForm.controls['address']?.invalid && hospitalForm.controls['address']?.touched" class="text-danger">
+                Address is required.
+              </div>
+            </div>
+    
+            <!-- Contact Number -->
+            <div class="form-group">
+              <label for="contactNumber" class="font-weight-bold text-secondary">Contact Number</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="hospital.contactNumber" 
+                name="contactNumber" 
+                required 
+                placeholder="Enter Contact Number" />
+              <div *ngIf="hospitalForm.controls['contactNumber']?.invalid && hospitalForm.controls['contactNumber']?.touched" class="text-danger">
+                Contact Number is required.
+              </div>
+            </div>
+    
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email" class="font-weight-bold text-secondary">Email</label>
+              <input 
+                type="email" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="hospital.email" 
+                name="email" 
+                required 
+                placeholder="Enter Email" />
+              <div *ngIf="hospitalForm.controls['email']?.invalid && hospitalForm.controls['email']?.touched" class="text-danger">
+                Email is required.
+              </div>
+            </div>
+    
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="hospitalForm.invalid">
+              Update Hospital
+            </button>
+    
+          </form>
+    
+          <!-- Success and Error messages -->
+          <div *ngIf="successMessage" class="alert alert-success mt-4">{{ successMessage }}</div>
+          <div *ngIf="errorMessage" class="alert alert-danger mt-4">{{ errorMessage }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

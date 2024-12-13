@@ -1,0 +1,144 @@
+<div class="container mt-5">
+    <div class="d-flex justify-content-end mb-4">
+      <button mat-raised-button color="accent" type="button" class="me-2" style="color:black;" (click)="back()">Back</button>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-lg border-0 rounded p-4">
+          <h2 class="text-center text-primary mb-4">Update Patient</h2>
+          <form (ngSubmit)="onSubmit()" #patientForm="ngForm">
+    
+          
+            <!-- <div class="form-group">
+              <label for="patientId" class="font-weight-bold text-secondary">Patient ID</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="patient.patientId" 
+                name="patientId" 
+                required 
+                placeholder="Enter Patient ID" />
+              <div *ngIf="patientForm.controls['patientId']?.invalid && patientForm.controls['patientId']?.touched" class="text-danger">
+                Patient ID is required.
+              </div>
+            </div> -->
+    
+            <!-- First Name -->
+            <div class="form-group">
+              <label for="firstName" class="font-weight-bold text-secondary">First Name</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="patient.firstName" 
+                name="firstName" 
+                required 
+                placeholder="Enter First Name" />
+              <div *ngIf="patientForm.controls['firstName']?.invalid && patientForm.controls['firstName']?.touched" class="text-danger">
+                First Name is required.
+              </div>
+            </div>
+    
+            <!-- Last Name -->
+            <div class="form-group">
+              <label for="lastName" class="font-weight-bold text-secondary">Last Name</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="patient.lastName" 
+                name="lastName" 
+                required 
+                placeholder="Enter Last Name" />
+              <div *ngIf="patientForm.controls['lastName']?.invalid && patientForm.controls['lastName']?.touched" class="text-danger">
+                Last Name is required.
+              </div>
+            </div>
+    
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email" class="font-weight-bold text-secondary">Email</label>
+              <input 
+                type="email" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="patient.email" 
+                name="email" 
+                required 
+                placeholder="Enter Email" />
+              <div *ngIf="patientForm.controls['email']?.invalid && patientForm.controls['email']?.touched" class="text-danger">
+                Email is required.
+              </div>
+            </div>
+    
+            <!-- Phone -->
+            <div class="form-group">
+              <label for="phone" class="font-weight-bold text-secondary">Phone</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="patient.phone" 
+                name="phone" 
+                required 
+                placeholder="Enter Phone" />
+              <div *ngIf="patientForm.controls['phone']?.invalid && patientForm.controls['phone']?.touched" class="text-danger">
+                Phone is required.
+              </div>
+            </div>
+    
+            <!-- Date of Birth -->
+            <div class="form-group">
+              <label for="dob" class="font-weight-bold text-secondary">Date of Birth</label>
+              <input 
+                type="date" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="patient.dob" 
+                name="dob" 
+                required 
+                placeholder="Enter Date of Birth" />
+              <div *ngIf="patientForm.controls['dob']?.invalid && patientForm.controls['dob']?.touched" class="text-danger">
+                Date of Birth is required.
+              </div>
+            </div>
+    
+            <!-- Gender -->
+            <div class="form-group">
+              <label for="gender" class="font-weight-bold text-secondary">Gender</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="patient.gender" 
+                name="gender" 
+                required 
+                placeholder="Enter Gender" />
+              <div *ngIf="patientForm.controls['gender']?.invalid && patientForm.controls['gender']?.touched" class="text-danger">
+                Gender is required.
+              </div>
+            </div>
+    
+            <!-- Address -->
+            <div class="form-group">
+              <label for="address" class="font-weight-bold text-secondary">Address</label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg" 
+                [(ngModel)]="patient.address" 
+                name="address" 
+                required 
+                placeholder="Enter Address" />
+              <div *ngIf="patientForm.controls['address']?.invalid && patientForm.controls['address']?.touched" class="text-danger">
+                Address is required.
+              </div>
+            </div>
+    
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="patientForm.invalid">
+              Update Patient
+            </button>
+    
+          </form>
+    
+          <!-- Success and Error messages -->
+          <div *ngIf="successMessage" class="alert alert-success mt-4">{{ successMessage }}</div>
+          <div *ngIf="errorMessage" class="alert alert-danger mt-4">{{ errorMessage }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

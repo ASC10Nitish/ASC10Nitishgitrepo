@@ -1,0 +1,59 @@
+
+<div class="container my-5">
+  
+    <div class="d-flex justify-content-end mb-4">
+        <button type="button" (click)="logout()" class="btn btn-primary btn-lg" style="width: 150px;">
+            Logout
+        </button>
+        <button type="button" class="btn btn-warning btn-sm " (click)="addissue()">Add Issue</button>
+    </div>
+    
+    
+    <h3 class="heading text-center mb-4">issue-list</h3>
+  
+    
+    <div class="mb-4 d-flex justify-content-between align-items-center">
+        <div class="input-group w-50">
+            <input type="text" [(ngModel)]="searchInput" name="searchInput"  placeholder="Search by ID">
+            <button type="button" (click)="searchIssues()" class="btn btn-info">Search</button>
+        </div>
+    </div>
+  
+    
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered" style="width: 100%;">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Issue Id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Assignee</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+  
+            <tbody>
+                <tr *ngFor="let issue of issues" class="align-middle">
+                    <td>{{issue.issue_id}}</td>
+                    <td>{{issue.title}}</td>
+                    <td>{{issue.description}}</td>
+                    <td>{{issue.priority}}</td>
+                    <td>{{issue.status}}</td>
+                    <td>{{issue.assignee}}</td>
+                    <td>{{issue.date}}</td>
+
+
+                    <td class="d-flex justify-content-around">
+                        <button (click)="deleteIssue(issue)" class="btn btn-danger btn-sm">Delete</button>
+                        <button (click)="updateIssues(issue.id)" class="btn btn-warning btn-sm">Update</button>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  

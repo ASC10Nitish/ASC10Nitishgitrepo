@@ -1,0 +1,56 @@
+<div class="container my-5">
+  
+    <div class="d-flex justify-content-end mb-4">
+      <button mat-raised-button color="primary" type="button" class="me-2" (click)="addReview()">Add Review</button>
+      <button mat-raised-button color="accent" type="button" class="me-2" style="color:black;" (click)="back()">Back</button>
+      <button mat-raised-button color="warn" type="button" style="width: 150px;" (click)="logout()">Logout</button>
+    </div>
+  
+    <!-- Search Input Section -->
+    <div class="mb-4 d-flex justify-content-between align-items-center">
+      <div class="w-50">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Search by ID for details</mat-label>
+          <input matInput [(ngModel)]="searchInput" (ngModelChange)="searchReviews()" name="searchInput" placeholder="Enter Review ID" />
+        </mat-form-field>
+      </div>
+    </div>
+  
+    <!-- Heading Section -->
+    <h3 style="text-align: left; background-color: bisque; color: black; padding: 8px; margin-bottom: 20px; width: 200px;">Review List</h3>
+  
+    <!-- Reviews Table Section -->
+    <div class="table-responsive">
+      <table class="table table-hover table-striped table-bordered" style="width: 100%;">
+        <thead class="thead-dark">
+          <tr>
+            <th>Review ID</th>
+            <th>Doctor Name</th>
+            <th>Patient Name</th>
+            <th>Review Text</th>
+            <th>Rating</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop through the reviews and display each review's data -->
+          <tr *ngFor="let review of reviews" class="align-middle">
+            <td>{{ review.id }}</td> <!-- Review ID -->
+            <td>{{ review.doctor_name }}</td> <!-- Doctor Name -->
+            <td>{{ review.patient_name }}</td> <!-- Patient Name -->
+            <td>{{ review.review_text }}</td> <!-- Review Text -->
+            <td>{{ review.rating }}</td> <!-- Rating -->
+            <td>{{ review.date | date:'MM/dd/yyyy' }}</td> <!-- Date -->
+  
+            <!-- Actions Column with Delete and Update Buttons -->
+            <td class="d-flex justify-content-around">
+              <button mat-raised-button (click)="deleteReview(review.id)" class="btn btn-danger btn-sm" style="background-color: red;">Delete</button>
+              <button mat-raised-button (click)="updateReview(review.id)" class="btn btn-warning btn-sm" style="background-color: orange;">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
